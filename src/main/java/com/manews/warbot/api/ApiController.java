@@ -19,10 +19,10 @@ public class ApiController {
 
     @Autowired
     private KillService killService;
-
+    
     @Autowired
     private FileService fileService;
-
+    //Kills to rndom people
     @RequestMapping(value = "/kill", method = RequestMethod.POST)
     public ResponseEntity<KillerKilledEntity> getSomeoneKilled() throws KillServiceException {
             return new ResponseEntity<>(killService.killSteps(), HttpStatus.ACCEPTED);
