@@ -27,7 +27,7 @@ public class ApiController {
     public ResponseEntity<KillerKilledEntity> getSomeoneKilled() throws KillServiceException {
             return new ResponseEntity<>(killService.killSteps(), HttpStatus.ACCEPTED);
     }
-
+    //Return logs
     @RequestMapping(value = "/info/log", method = RequestMethod.GET)
     public ResponseEntity<String> getLog() throws FileServiceException {
         return new ResponseEntity<>(fileService.getLog(), HttpStatus.ACCEPTED);
