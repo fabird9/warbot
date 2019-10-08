@@ -32,12 +32,12 @@ public class ApiController {
     public ResponseEntity<String> getLog() throws FileServiceException {
         return new ResponseEntity<>(fileService.getLog(), HttpStatus.ACCEPTED);
     }
-    //Return info killer
+
     @RequestMapping(value = "/info/killer", method = RequestMethod.GET)
     public ResponseEntity<String> getKiller() throws FileServiceException {
         return new ResponseEntity<>(fileService.getKillerInfo(), HttpStatus.ACCEPTED);
     }
-
+    //Return info killed
     @RequestMapping(value = "/info/killed", method = RequestMethod.GET)
     public ResponseEntity<String> getKilled() throws FileServiceException {
         return new ResponseEntity<>(fileService.getKilled(), HttpStatus.ACCEPTED);
